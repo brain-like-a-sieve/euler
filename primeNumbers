@@ -1,0 +1,39 @@
+<?php
+
+function isPrime($n)
+{
+    for($i = 2; $i <= sqrt($n); $i++)
+    {
+        if($n % $i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+function primeArray($n)
+{
+    for($i = 2; $i <= $n; $i++)
+    {
+        if(isPrime($i))
+        {
+            $primeArray[] = $i;
+        }
+    }
+    return $primeArray;
+}
+
+function primeFactors($n)
+{
+    $primeArray = primeArray($n);
+
+    foreach($primeArray as $d)
+    {
+        if($n % $d == 0)
+        {
+            $primeFactors[] = $d;
+        }
+    }
+    return $primeFactors;
+}

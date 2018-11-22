@@ -1,0 +1,22 @@
+<?php
+
+function collatzSequence($n)
+{
+    $collatzSequence[1] = $n;
+    
+    while($n != 1)
+    {
+        if($n % 2 == 0)
+        {
+            $n /= 2;
+            $collatzSequence[] = $n;
+        }
+        else
+        {
+            $n = ($n * 3) + 1;
+            $collatzSequence[] = $n;
+        }
+    }
+    
+    return $collatzSequence;
+}

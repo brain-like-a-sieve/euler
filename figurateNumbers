@@ -1,0 +1,55 @@
+<?php
+
+function triangular($n)
+{
+    $t = $n * ($n + 1) / 2;
+    return $t;
+}
+
+function testTriangular($n)
+{
+    if(fmod((sqrt((8 * $n) + 1) - 1) /2, 1) == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function pentagonal($n)
+{
+    $p = $n * (($n * 3) - 1) / 2;
+    return $p;
+}
+
+function testPentagonal($n)
+{
+    if(fmod((sqrt((24 * $n) + 1) + 1) / 6, 1) == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function hexagonal($n)
+{
+    $h = $n * (($n * 2) - 1);
+    return $h;
+}
+
+function testHexagonal($n)
+{
+    if(fmod((sqrt((8 * $n) + 1) + 1) / 4, 1) == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

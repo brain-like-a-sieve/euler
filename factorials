@@ -1,0 +1,21 @@
+<?php
+
+function factorial($n)
+{
+    for($i = 1, $f = 1; $i <= $n; $i++)
+    {
+        $f *= $i;
+    }
+    
+    return $f;
+}
+
+function factorialArray($n)
+{
+    for($i = 0; $i <= $n; $i++)
+    {
+        $factorialArray[$i] = factorial($i);
+    }
+    
+    return $factorialArray;
+}

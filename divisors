@@ -1,0 +1,13 @@
+include "primeNumbers.php";
+
+function numberOfDivisors($n)
+{
+    $x = 1;
+    
+    foreach(primeFactors($n) as $d)
+    {
+        $x = ($d + 1) * $x;
+    }
+    
+    return $x;
+}

@@ -9,6 +9,7 @@ function isPrime($n)
             return false;
         }
     }
+    
     return true;
 }
 
@@ -21,6 +22,7 @@ function primeArray($n)
             $primeArray[] = $i;
         }
     }
+    
     return $primeArray;
 }
 
@@ -35,6 +37,7 @@ function primeFactors($n)
             $primeFactors[] = $d;
         }
     }
+    
     return $primeFactors;
 }
 

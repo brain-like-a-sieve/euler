@@ -37,3 +37,36 @@ function primeFactors($n)
     }
     return $primeFactors;
 }
+
+function primeFactorisation($n)
+{
+    $primeFactorArray = array();
+    
+    if(isPrime($n))
+    {
+        $primeFactorArray[1] = $n;
+        return $primeFactorArray;
+    }
+    
+    $primeArray = primeArray($n);
+    
+    while(array_product($primeFactorArray) != $n)
+    {    
+        foreach($primeArray as $d)
+        {
+            if($n % $d == 0)
+            {
+                $primeFactorArray[] = $d;
+                $n /= $d;
+                break;
+            }
+        }
+        
+        if(isPrime($n))
+        {
+            $primeFactorArray[] = $n;  
+            $primeFactorisation = array_count_values($primeFactorArray);
+            return $primeFactorisation;
+        }
+    }
+}
